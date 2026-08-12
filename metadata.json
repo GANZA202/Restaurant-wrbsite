@@ -1,0 +1,6 @@
+{
+  "name": "Ember & Oak",
+  "description": "Ember & Oak - Live-fire seasonal restaurant and hearth experience in Kigali, Rwanda",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
