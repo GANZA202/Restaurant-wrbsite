@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, Flame } from 'lucide-react';
 
-interface HeaderProps {
-  onOpenReservation?: () => void;
-}
-
-export const Header: React.FC<HeaderProps> = ({ onOpenReservation }) => {
+export const Header = ({ onOpenReservation }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
@@ -44,7 +40,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenReservation }) => {
     { label: 'Reservations', href: '#reservation', id: 'reservation' },
   ];
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (e, href) => {
     e.preventDefault();
     setMobileMenuOpen(false);
     const target = document.querySelector(href);

@@ -1,8 +1,8 @@
 import React from 'react';
-import { RESTAURANT_INFO } from '../data/restaurantData';
-import { MapPin, Clock, Phone, Mail, Navigation, MessageCircle } from 'lucide-react';
+import { RESTAURANT_INFO } from '../data/restaurantData.js';
+import { MapPin, Clock, Phone, Mail, MessageCircle } from 'lucide-react';
 
-export const VisitSection: React.FC = () => {
+export const VisitSection = () => {
   return (
     <section id="visit" className="py-24 lg:py-36 bg-[#141210] relative overflow-hidden border-t border-[#2A2520]">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">

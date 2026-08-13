@@ -1,11 +1,7 @@
 import React from 'react';
-import { Flame, Heart } from 'lucide-react';
+import { Heart } from 'lucide-react';
 
-interface HearthSectionProps {
-  onOpenReservation?: () => void;
-}
-
-export const HearthSection: React.FC<HearthSectionProps> = ({ onOpenReservation }) => {
+export const HearthSection = ({ onOpenReservation }) => {
   return (
     <section id="hearth" className="relative py-32 lg:py-44 overflow-hidden bg-[#0D0C0B]">
       {/* Background Image with Dark Gradient Layer */}

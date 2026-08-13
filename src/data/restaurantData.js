@@ -1,50 +1,3 @@
-export interface MenuItem {
-  id: string;
-  name: string;
-  description: string;
-  price: string;
-  category: 'small-plates' | 'from-the-fire' | 'rwanda-inspired' | 'sides' | 'desserts' | 'drinks';
-  tags?: string[];
-  featured?: boolean;
-}
-
-export interface FireStage {
-  number: string;
-  title: string;
-  description: string;
-  image: string;
-  alt: string;
-}
-
-export interface ElementItem {
-  number: string;
-  title: string;
-  subtitle: string;
-  description: string;
-}
-
-export interface TimelineStep {
-  number: string;
-  title: string;
-  description: string;
-  detail: string;
-}
-
-export interface GalleryItem {
-  id: string;
-  title: string;
-  category: string;
-  image: string;
-  aspectRatio: 'landscape' | 'portrait' | 'square' | 'tall';
-}
-
-export interface GuestNote {
-  id: string;
-  quote: string;
-  author: string;
-  location: string;
-}
-
 export const RESTAURANT_INFO = {
   name: "Ember & Oak",
   tagline: "Live-Fire & Seasonal Kitchen",
@@ -58,7 +11,7 @@ export const RESTAURANT_INFO = {
   location: "Kigali Heights · Kigali · Rwanda",
 };
 
-export const FIRE_STAGES: FireStage[] = [
+export const FIRE_STAGES = [
   {
     number: "01",
     title: "Wood & Charcoal",
@@ -89,7 +42,7 @@ export const FIRE_STAGES: FireStage[] = [
   }
 ];
 
-export const FOUR_ELEMENTS: ElementItem[] = [
+export const FOUR_ELEMENTS = [
   {
     number: "01",
     title: "Wood",
@@ -124,9 +77,9 @@ export const MENU_CATEGORIES = [
   { id: 'sides', label: 'Sides' },
   { id: 'desserts', label: 'Desserts' },
   { id: 'drinks', label: 'Drinks' }
-] as const;
+];
 
-export const MENU_ITEMS: MenuItem[] = [
+export const MENU_ITEMS = [
   // Small Plates (5,000 - 10,000 RWF)
   {
     id: "sp-1",
@@ -362,7 +315,7 @@ export const MENU_ITEMS: MenuItem[] = [
   }
 ];
 
-export const VISITING_EXPERIENCE: TimelineStep[] = [
+export const VISITING_EXPERIENCE = [
   {
     number: "01",
     title: "Welcome",
@@ -389,7 +342,7 @@ export const VISITING_EXPERIENCE: TimelineStep[] = [
   }
 ];
 
-export const GALLERY_ITEMS: GalleryItem[] = [
+export const GALLERY_ITEMS = [
   {
     id: "g1",
     title: "Live Fire Hearth & Brochettes",
@@ -434,7 +387,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
   }
 ];
 
-export const GUEST_NOTES: GuestNote[] = [
+export const GUEST_NOTES = [
   {
     id: "gn-1",
     quote: "Great atmosphere, good food and the fire cooking made the evening in Kigali special. The beef brochettes were tender and full of flavor.",

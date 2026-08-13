@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
-import { MENU_CATEGORIES, MENU_ITEMS, MenuItem } from '../data/restaurantData';
+import { MENU_CATEGORIES, MENU_ITEMS } from '../data/restaurantData.js';
 import { Utensils } from 'lucide-react';
 
-interface MenuSectionProps {
-  onReserveItem?: (itemName: string) => void;
-}
-
-export const MenuSection: React.FC<MenuSectionProps> = ({ onReserveItem }) => {
-  const [activeTab, setActiveTab] = useState<typeof MENU_CATEGORIES[number]['id']>('all');
+export const MenuSection = ({ onReserveItem }) => {
+  const [activeTab, setActiveTab] = useState('all');
 
   const filteredItems = activeTab === 'all'
     ? MENU_ITEMS
@@ -57,9 +53,9 @@ export const MenuSection: React.FC<MenuSectionProps> = ({ onReserveItem }) => {
           </div>
         </div>
 
-        {/* Menu Items List - Pure Editorial Layout */}
+        {/* Menu Items List */}
         <div className="space-y-8 sm:space-y-10 max-w-4xl mx-auto">
-          {filteredItems.map((item: MenuItem) => (
+          {filteredItems.map((item) => (
             <div
               key={item.id}
               className="group pt-3 pb-5 border-b border-[#2A2520]/60 hover:border-[#C85832]/50 transition-colors duration-300 flex flex-col sm:flex-row sm:items-baseline justify-between gap-4"

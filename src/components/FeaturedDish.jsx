@@ -1,11 +1,7 @@
 import React from 'react';
 import { Flame, Sparkles } from 'lucide-react';
 
-interface FeaturedDishProps {
-  onSelectDish?: (dishName: string) => void;
-}
-
-export const FeaturedDish: React.FC<FeaturedDishProps> = ({ onSelectDish }) => {
+export const FeaturedDish = ({ onSelectDish }) => {
   return (
     <section className="py-24 lg:py-36 bg-[#0D0C0B] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 space-y-24 lg:space-y-36">
@@ -22,7 +18,7 @@ export const FeaturedDish: React.FC<FeaturedDishProps> = ({ onSelectDish }) => {
           </h2>
         </div>
 
-        {/* Dish 1: Ember Beef Brochettes (Asymmetric Left-Image Block) */}
+        {/* Dish 1: Ember Beef Brochettes */}
         <div className="relative border border-[#2A2520] bg-[#141210] overflow-hidden p-8 sm:p-12 lg:p-16">
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#C85832]/10 rounded-full blur-3xl pointer-events-none" />
 
@@ -81,7 +77,7 @@ export const FeaturedDish: React.FC<FeaturedDishProps> = ({ onSelectDish }) => {
           </div>
         </div>
 
-        {/* Dish 2: Fire-Roasted Lake Kivu Tilapia (Reversed Editorial Layout) */}
+        {/* Dish 2: Fire-Roasted Lake Kivu Tilapia */}
         <div className="relative border border-[#2A2520] bg-[#141210] overflow-hidden p-8 sm:p-12 lg:p-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
@@ -140,7 +136,7 @@ export const FeaturedDish: React.FC<FeaturedDishProps> = ({ onSelectDish }) => {
           </div>
         </div>
 
-        {/* Dish 3: Kigali Ember Chicken (Horizontal Banner Frame) */}
+        {/* Dish 3: Kigali Ember Chicken */}
         <div className="relative border border-[#2A2520] bg-[#1A1815] p-8 sm:p-12 lg:p-16">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             

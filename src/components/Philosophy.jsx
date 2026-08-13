@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Philosophy: React.FC = () => {
+export const Philosophy = () => {
   return (
     <section className="py-28 lg:py-44 bg-[#141210] relative overflow-hidden border-y border-[#2A2520]/60">
       <div className="max-w-5xl mx-auto px-6 lg:px-12 text-center space-y-12">

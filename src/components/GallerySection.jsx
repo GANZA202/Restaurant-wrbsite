@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { GALLERY_ITEMS, GalleryItem } from '../data/restaurantData';
+import { GALLERY_ITEMS } from '../data/restaurantData.js';
 import { Maximize2, X } from 'lucide-react';
 
-export const GallerySection: React.FC = () => {
-  const [selectedItem, setSelectedItem] = useState<GalleryItem | null>(null);
+export const GallerySection = () => {
+  const [selectedItem, setSelectedItem] = useState(null);
 
   return (
     <section id="gallery" className="py-24 lg:py-36 bg-[#0D0C0B] relative overflow-hidden">

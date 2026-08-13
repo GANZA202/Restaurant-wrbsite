@@ -1,7 +1,7 @@
 import React from 'react';
-import { FIRE_STAGES } from '../data/restaurantData';
+import { FIRE_STAGES } from '../data/restaurantData.js';
 
-export const FireProcess: React.FC = () => {
+export const FireProcess = () => {
   return (
     <section id="story" className="py-24 lg:py-36 bg-[#0D0C0B] relative overflow-hidden">
       {/* Background Accent Lines */}

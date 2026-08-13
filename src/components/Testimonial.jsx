@@ -1,8 +1,8 @@
 import React from 'react';
-import { GUEST_NOTES } from '../data/restaurantData';
+import { GUEST_NOTES } from '../data/restaurantData.js';
 import { MessageSquareQuote } from 'lucide-react';
 
-export const Testimonial: React.FC = () => {
+export const Testimonial = () => {
   return (
     <section className="py-24 lg:py-36 bg-[#141210] relative overflow-hidden border-y border-[#2A2520]">
       <div className="max-w-6xl mx-auto px-6 lg:px-12 space-y-16">

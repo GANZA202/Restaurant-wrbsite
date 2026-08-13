@@ -1,17 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Volume2, VolumeX, Flame } from 'lucide-react';
+import { Volume2, VolumeX } from 'lucide-react';
 
-interface HeroProps {
-  onOpenReservation?: () => void;
-}
-
-export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
+export const Hero = ({ onOpenReservation }) => {
   const [isMuted, setIsMuted] = useState(true);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const audioRef = useRef(null);
 
-  // Initialize ambient hearth sound effect if available or handled via Web Audio
+  // Initialize ambient hearth sound effect if available
   useEffect(() => {
-    // Creating ambient crackle audio node if user unmutes
     const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2281/2281-preview.mp3');
     audio.loop = true;
     audio.volume = 0.25;
@@ -29,7 +24,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
       audioRef.current.play().then(() => {
         setIsMuted(false);
       }).catch(() => {
-        // Fallback if browser blocks autoplay without user gesture
         setIsMuted(false);
       });
     } else {
@@ -38,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
     }
   };
 
-  const scrollToMenu = (e: React.MouseEvent) => {
+  const scrollToMenu = (e) => {
     e.preventDefault();
     const menuEl = document.getElementById('menu');
     if (menuEl) {
@@ -46,7 +40,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
     }
   };
 
-  const scrollToReservation = (e: React.MouseEvent) => {
+  const scrollToReservation = (e) => {
     e.preventDefault();
     if (onOpenReservation) {
       onOpenReservation();
@@ -76,21 +70,15 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
         />
 
         {/* 2. Dark Image Overlay Layers */}
-        {/* Dark uniform overlay (50-60%) to ensure text readability while preserving food rich detail */}
         <div className="absolute inset-0 bg-[#0D0C0B]/55 backdrop-brightness-90" />
-        
-        {/* Subtle vertical and radial gradient overlays */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#0D0C0B] via-[#0D0C0B]/40 to-[#0D0C0B]/70" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#0D0C0B]/80 via-transparent to-[#0D0C0B]/60" />
 
-        {/* Warm ember glow at bottom left */}
         <div className="absolute bottom-1/4 -left-12 w-80 h-80 bg-[#C85832]/15 rounded-full blur-3xl pointer-events-none" />
       </div>
 
-      {/* Main Content Area - Left Aligned Editorial Layout */}
+      {/* Main Content Area */}
       <div className="relative z-10 my-auto w-full max-w-4xl space-y-6 sm:space-y-8 pt-4 sm:pt-8">
-        
-        {/* 3. Main Headline */}
         <h1 className="font-serif text-5xl sm:text-7xl lg:text-8xl xl:text-9xl text-[#F3EFEA] font-normal leading-[0.92] tracking-tight flex flex-col">
           <span>Where fire</span>
           <span>becomes</span>
@@ -99,12 +87,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
           </span>
         </h1>
 
-        {/* 4. Supporting Description */}
         <p className="text-base sm:text-lg lg:text-xl text-[#E6E1DA]/90 max-w-xl font-sans font-light leading-relaxed">
           A hearth kitchen in Kigali Heights, where hardwood charcoal embers bring out the authentic depth of Rwandan live-fire cooking.
         </p>
 
-        {/* 5. CTA Buttons */}
         <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 w-full max-w-lg sm:max-w-none">
           <button
             onClick={scrollToReservation}
@@ -122,7 +108,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenReservation }) => {
         </div>
       </div>
 
-      {/* 6. Sound / Mute Toggle Button at Bottom Right */}
+      {/* Sound Toggle */}
       <div className="relative z-20 flex justify-end items-center w-full">
         <button
           type="button"

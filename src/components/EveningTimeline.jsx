@@ -1,8 +1,8 @@
 import React from 'react';
-import { VISITING_EXPERIENCE } from '../data/restaurantData';
+import { VISITING_EXPERIENCE } from '../data/restaurantData.js';
 import { Flame } from 'lucide-react';
 
-export const EveningTimeline: React.FC = () => {
+export const EveningTimeline = () => {
   return (
     <section className="py-24 lg:py-36 bg-[#141210] relative overflow-hidden border-t border-[#2A2520]/80">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">

@@ -16,9 +16,9 @@ import { VisitSection } from './components/VisitSection';
 import { Footer } from './components/Footer';
 
 export default function App() {
-  const [selectedDishForBooking, setSelectedDishForBooking] = useState<string | undefined>();
+  const [selectedDishForBooking, setSelectedDishForBooking] = useState(undefined);
 
-  const handleSelectDish = (dishName: string) => {
+  const handleSelectDish = (dishName) => {
     setSelectedDishForBooking(dishName);
     const reservationElement = document.getElementById('reservation');
     if (reservationElement) {
@@ -58,7 +58,7 @@ export default function App() {
         {/* Interactive Menu Section */}
         <MenuSection onReserveItem={handleSelectDish} />
 
-        {/* Chef & Founder Alistair MacLeod */}
+        {/* Chef & Founder Chef Daniel */}
         <ChefSection />
 
         {/* Living Hearth Open Kitchen Experience */}

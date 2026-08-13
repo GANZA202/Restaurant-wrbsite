@@ -1,11 +1,7 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Users, Flame, CheckCircle, AlertCircle, Phone, Mail, User } from 'lucide-react';
 
-interface ReservationSectionProps {
-  initialDish?: string;
-}
-
-export const ReservationSection: React.FC<ReservationSectionProps> = ({ initialDish }) => {
+export const ReservationSection = ({ initialDish }) => {
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -17,19 +13,18 @@ export const ReservationSection: React.FC<ReservationSectionProps> = ({ initialD
     specialRequests: initialDish ? `Interested in trying: ${initialDish}` : ''
   });
 
-  const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
+  const [status, setStatus] = useState('idle');
   const [refCode, setRefCode] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     if (errorMessage) setErrorMessage('');
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Field validation
     if (!formData.fullName.trim()) {
       setErrorMessage('Please provide your full name.');
       return;

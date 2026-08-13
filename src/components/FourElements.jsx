@@ -1,7 +1,7 @@
 import React from 'react';
-import { FOUR_ELEMENTS } from '../data/restaurantData';
+import { FOUR_ELEMENTS } from '../data/restaurantData.js';
 
-export const FourElements: React.FC = () => {
+export const FourElements = () => {
   return (
     <section className="py-24 lg:py-36 bg-[#0D0C0B] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">

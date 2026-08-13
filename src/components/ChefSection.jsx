@@ -1,13 +1,13 @@
 import React from 'react';
 import { Quote } from 'lucide-react';
 
-export const ChefSection: React.FC = () => {
+export const ChefSection = () => {
   return (
     <section id="chef" className="py-24 lg:py-36 bg-[#141210] relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           
-          {/* Chef Image Column - Featuring a Black African Chef */}
+          {/* Chef Image Column */}
           <div className="lg:col-span-5 relative">
             <div className="relative border border-[#2A2520] bg-[#0D0C0B] overflow-hidden group">
               <img
@@ -59,7 +59,7 @@ export const ChefSection: React.FC = () => {
               Ember &amp; Oak was founded on a commitment to live-fire hearth cooking. Chef Daniel combines ancestral charcoal techniques with ingredients and flavors inspired by Rwanda — sourcing fresh Lake Kivu tilapia, local Gicumbi beef, and organic mountain produce. Every service is personally led at our central hearth.
             </p>
 
-            {/* Demonstration Content Note for School Project Evaluation */}
+            {/* Demonstration Content Note */}
             <div className="p-4 border border-[#2A2520] bg-[#0D0C0B] text-xs text-[#A39D93]">
               <span className="text-[#C85832] font-semibold uppercase tracking-wider block mb-0.5">Note:</span>
               Chef profile and biography are demonstration content created for frontend academic portfolio evaluation.

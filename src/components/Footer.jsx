@@ -1,8 +1,8 @@
 import React from 'react';
 import { Flame, Instagram, Facebook, ArrowRight } from 'lucide-react';
-import { RESTAURANT_INFO } from '../data/restaurantData';
+import { RESTAURANT_INFO } from '../data/restaurantData.js';
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
   return (
     <footer className="bg-[#090807] border-t border-[#2A2520] pt-20 pb-12 text-[#A39D93] text-xs">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 space-y-16">
