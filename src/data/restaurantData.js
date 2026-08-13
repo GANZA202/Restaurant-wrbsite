@@ -16,8 +16,8 @@ export const FIRE_STAGES = [
     number: "01",
     title: "Wood & Charcoal",
     description: "Sustainably harvested hardwood and organic charcoal timber from Rwanda's high forests, aged to burn clean and white-hot.",
-    image: "https://images.unsplash.com/photo-1529193591184-b1d58069ecdd?q=80&w=1200&auto=format&fit=crop",
-    alt: "Hardwood fuel and embers for live-fire dishes"
+    image: "/images/burning_oak_embers.jpg",
+    alt: "Stacked aged oak hardwood logs and white-hot glowing embers in Ember & Oak hearth"
   },
   {
     number: "02",
